@@ -15,4 +15,5 @@
   (cond
     preferred-customer 0.0
     (< order-amount 50.0) 5.0
-    (< order-amount 100.0) 10.0))
+    (< order-amount 100.0) 10.0
+    :else (* 0.1 order-amount)))
