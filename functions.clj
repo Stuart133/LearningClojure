@@ -21,3 +21,12 @@
 
 (defmethod normalize-book :alternative-map [book]
   {:title (:book book) :author (:by book)})
+
+(defn sum-copies
+  ([books] (sum-copies books 0))
+  ([books total]
+    (if (empty? books)
+      total
+      (recur
+        (rest books)
+        (+ total (:copies-sold (first books)))))))
