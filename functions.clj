@@ -30,3 +30,8 @@
       (recur
         (rest books)
         (+ total (:copies-sold (first books)))))))
+
+(defn publish-book [book]
+  {:pre [(:title book)]}
+  (print-book book)
+  (ship-book book))
