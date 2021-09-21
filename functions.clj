@@ -33,5 +33,6 @@
 
 (defn publish-book [book]
   {:pre [(:title book)]}
+  {:post [(boolean? %)]}
   (print-book book)
   (ship-book book))
