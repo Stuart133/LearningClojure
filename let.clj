@@ -1,5 +1,6 @@
 (defn compute-discount-amount [amount discount-percent min-charge]
-  (let [discounted-amount (* amount (-1.0 discount-percent))]
+  (let [discount (* amount discount-percent)
+        discounted-amount (- amount discount)]
   (if (> discounted-amount min-charge)
     discounted-amount
     min-charge)))
