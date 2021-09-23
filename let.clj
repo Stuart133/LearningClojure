@@ -21,3 +21,8 @@
         (if (> discounted-amount min-charge)
           discounted-amount
           min-charge)))))
+
+(defn uppercase-author [book]
+  (if-let [author (:author book)]
+    (.toUpperCase author)
+    "ANONYMOUS"))
