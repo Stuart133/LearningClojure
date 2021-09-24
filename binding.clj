@@ -1,4 +1,4 @@
-(def debug-enabled false)
+(def ^:dynamic *debug-enabled* false)
 
 (defn debug [msg]
   (if debug-enabled
